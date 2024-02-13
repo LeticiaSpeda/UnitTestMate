@@ -20,4 +20,12 @@ final class UtilsTests: XCTestCase {
         XCTAssertTrue(resultTrue)
         XCTAssertFalse(resultFalse)
     }
+    
+    func testNumberRandom() {
+        let upperBound = 1000
+        let result = Utils.random(upperBound: upperBound)
+        
+        XCTAssertTrue(result >= 0 && result <= upperBound)
+        
+    }
 }
